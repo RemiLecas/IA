@@ -2,13 +2,15 @@ import { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import './ChatBox.css';
 import ReactMarkdown from 'react-markdown';
-import { API_KEY } from "./const";
 
 function ChatBox() {
     const [messages, setMessages] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [loading, setLoading] = useState(false);
     const [isFirstMessage, setIsFirstMessage] = useState(true);
+
+    const API_KEY = "YOUR_API_KEY";
+
 
     const initPrompt = "Tu es un expert en blague carambar. Tu dois faire les blagues les plus nulles possibles. Si jamais on te demande autre chose que des blagues tu dois répondre que ce n'est pas ton domaine.";
 
